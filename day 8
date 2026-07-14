@@ -1,0 +1,201 @@
+# Day 08 – Task Log
+
+## Objective
+
+To understand decision-making and repetition in JavaScript by learning conditional statements and loops, and to develop problem-solving skills through practical implementation.
+
+---
+
+## Topics Covered
+
+* Conditional Statements
+* `if` Statement
+* `if...else` Statement
+* `else if` Ladder
+* Nested `if` Statements
+* Loops in JavaScript
+* `for` Loop
+* `while` Loop
+* `do...while` Loop
+* Loop Control and Iteration
+* Practical Programs Using Conditions and Loops
+
+---
+
+## Tasks Assigned
+
+| Sr. No. | Task | File Name |
+| ------: | ---------------------------------------------------- | ---------------- |
+| 1 | Practice conditional statements using `if`,`if...else` and `else if` | `conditions.js` |
+| 3 | Practice iteration using loops | `loop.js` |
+
+---
+
+## Work Completed
+
+Successfully implemented various programs using conditional statements and loops. Practiced making decisions based on different conditions and executed repetitive tasks using different types of loops. Developed simple programs that combined conditions and iteration, improving logical thinking and programming skills.
+
+---
+
+## Skills Practiced
+
+* JavaScript Fundamentals
+* Conditional Statements
+* Decision Making
+* Looping and Iteration
+* Problem Solving
+* Logical Thinking
+* Basic Programming Concepts
+
+---
+
+## Learning Outcomes
+
+* Understood how conditional statements control the flow of a program.
+* Learned to use `if`, `if...else`, `else if`, `switch`, and nested conditions effectively.
+* Gained practical experience with `for`, `while`, and `do...while` loops.
+* Understood the importance of loops in reducing repetitive code.
+* Improved problem-solving skills by combining conditions and loops.
+* Developed confidence in writing programs involving decision-making and iteration.
+
+---
+
+## Challenges & Solutions
+
+Initially found it difficult to determine which type of loop was most suitable for different problems and to manage the flow of nested conditions. Through repeated practice and writing small programs, the concepts became clearer and easier to implement.
+
+---
+
+## Conclusion
+
+Today's session introduced two of the most important programming concepts in JavaScript: conditional statements and loops. Practical exercises helped in understanding program flow, decision-making, and repetition, laying a strong foundation for solving more complex programming problems in the future.
+
+
+
+  // 1. Check whether a number is positive, negative, or zero
+let num=-3;
+if(num>0){
+    console.log(num,"is positive");
+}
+else if(num===0){
+    console.log("Number is zero");
+}
+else{
+    console.log(num,"is Negative");
+}
+
+// 2. Check whether a number is even or odd
+let num1=14;
+if(num1%2===0){
+    console.log(num1,"is Even Number");
+}
+else{
+    console.log(num1,"is Odd Number");
+}
+
+// 3. Find the largest of two numbers
+let a=10;
+let b=5;
+if(a>b){
+    console.log(a,"is greater");
+}
+else if(a===b){
+    console.log("Number are equal");
+}
+else{
+    console.log(b,"is greater");
+}
+
+// 4. Find the largest of three numbers
+let x = 10;
+let y = 45;
+let z = 15;
+
+if (x >= y && x >= z) {
+    console.log(x," is the Largest Number");
+}
+else if (y >= x && y >= z) {
+    console.log(y," is the Largest Number");
+}
+else {
+    console.log(z," is the Largest Number");
+}
+
+// 5. Print the day name using switch
+let day = 5;
+
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+
+    case 2:
+        console.log("Tuesday");
+        break;
+
+    case 3:
+        console.log("Wednesday");
+        break;
+
+    case 4:
+        console.log("Thursday");
+        break;
+
+    case 5:
+        console.log("Friday");
+        break;
+
+    case 6:
+        console.log("Saturday");
+        break;
+
+    case 7:
+        console.log("Sunday");
+        break;
+
+    default:
+        console.log("Invalid Day Number");
+}
+
+
+// Find the factorial of a number
+let num=6;
+let fact=1;
+for(let i=1;i<=num;i++){
+    fact*=i;
+}
+console.log("Factorial of",num,"is",fact);
+
+// Reverse a number
+let num1=2034;
+let rev=0;
+while(num1!==0){
+    let digit=num1%10;
+    rev=rev*10+digit;
+    num1=Math.floor(num1/10);
+}
+console.log("Reverse:",rev);
+
+// Print all prime numbers from 1 to 100
+console.log("Prime Numbers:");
+for(let i=0;i<=100;i++){
+    let isprime=true;
+    for(let j=2;j<i;j++){
+        if(i%j===0){
+            isprime=false;
+            break;
+        }
+    }
+    if(isprime){
+        console.log(i);
+    }
+}
+
+// Star Pattern - Right Angled Triangle
+for(let i=0;i<=5;i++){
+    let pattern="";
+    for(let j=0;j<i;j++){
+        pattern+="* ";
+    }
+    console.log(pattern);
+}
