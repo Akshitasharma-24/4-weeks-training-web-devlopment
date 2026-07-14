@@ -1,5 +1,5 @@
-
-CSS Animation
+#day-5
+##CSS Animation
 
 Learned how to create animations using the "@keyframes" rule.
 
@@ -21,7 +21,7 @@ Learned how to create animations using the "@keyframes" rule.
 
 ---
 
-CSS Transform
+##CSS Transform
 
 Practiced different transform functions.
 
@@ -43,7 +43,7 @@ Practiced different transform functions.
 
 ---
 
-CSS Transition
+##CSS Transition
 
 Applied smooth transition effects on hover.
 
@@ -61,7 +61,7 @@ button:hover{
 
 ---
 
-CSS Selectors
+##CSS Selectors
 
 Universal Selector
 
