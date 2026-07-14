@@ -1,1 +1,139 @@
 
+CSS Animation
+
+Learned how to create animations using the "@keyframes" rule.
+
+.box{
+    width:100px;
+    height:100px;
+    background:blue;
+    animation:move 3s infinite;
+}
+
+@keyframes move{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(300px);
+    }
+}
+
+---
+
+CSS Transform
+
+Practiced different transform functions.
+
+.box{
+    transform:rotate(45deg);
+}
+
+.box{
+    transform:scale(1.5);
+}
+
+.box{
+    transform:translate(100px,50px);
+}
+
+.box{
+    transform:skew(20deg,10deg);
+}
+
+---
+
+CSS Transition
+
+Applied smooth transition effects on hover.
+
+button{
+    background:green;
+    color:white;
+    padding:10px;
+    transition:0.5s;
+}
+
+button:hover{
+    background:red;
+    transform:scale(1.2);
+}
+
+---
+
+CSS Selectors
+
+Universal Selector
+
+*{
+    margin:0;
+    padding:0;
+}
+
+Element Selector
+
+p{
+    color:blue;
+}
+
+Class Selector
+
+.text{
+    color:red;
+}
+
+ID Selector
+
+#heading{
+    color:green;
+}
+
+Group Selector
+
+h1, p{
+    color:purple;
+}
+
+Descendant Selector
+
+div p{
+    color:orange;
+}
+
+Child Selector
+
+div > p{
+    color:brown;
+}
+
+Adjacent Sibling Selector
+
+h1 + p{
+    color:red;
+}
+
+General Sibling Selector
+
+h1 ~ p{
+    color:blue;
+}
+
+Attribute Selector
+
+input[type="text"]{
+    border:2px solid black;
+}
+
+Pseudo-class Selector
+
+button:hover{
+    background:black;
+    color:white;
+}
+
+Pseudo-element Selector
+
+p::first-letter{
+    font-size:30px;
+    color:red;
+}
