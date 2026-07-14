@@ -1,0 +1,141 @@
+# Day 11 – Task Log
+
+## Objective
+
+To understand the concept of arrays in JavaScript and learn how to store, manipulate, and process collections of data using both basic and advanced array methods.
+
+---
+
+## Topics Covered
+
+* Introduction to Arrays
+* Creating Arrays
+* Accessing and Modifying Array Elements
+* Array Properties
+* Basic Array Methods
+  * `push()`
+  * `pop()`
+  * `shift()`
+  * `unshift()`
+  * `splice()`
+  * `slice()`
+  * `concat()`
+  * `indexOf()`
+  * `includes()`
+* Advanced Array Methods
+  * `forEach()`
+  * `map()`
+  * `filter()`
+  * `find()`
+  * `reduce()`
+
+---
+
+## Tasks Assigned
+
+| Sr. No. | Task | File Name |
+| ------: | --------------------------------------------------- | ------------------- |
+| 1 | Practice array creation and basic array operations | `arrays.js` |
+| 2 | Implement and test basic array methods | `array-methods.js` |
+| 3 | Practice advanced array methods such as `map()` and `filter()` | `advanced-arrays.js` |
+| 4 | Solve problems using `find()`, `reduce()`, and `forEach()` | `advance-methods-practice.js` |
+
+---
+
+## Work Completed
+
+Successfully created and manipulated arrays using various basic array methods. Practiced adding, removing, and modifying array elements and then implemented advanced array methods such as `map()`, `filter()`, `find()`, `reduce()`, and `forEach()` to process and transform data efficiently. These exercises improved my understanding of handling collections of data in JavaScript.
+
+---
+
+## Skills Practiced
+
+* JavaScript Arrays
+* Array Manipulation
+* Data Processing
+* Problem Solving
+* Logical Thinking
+
+---
+
+## Learning Outcomes
+
+* Understood the concept and importance of arrays in JavaScript.
+* Learned how to create, access, and modify array elements.
+* Gained practical experience with commonly used array methods.
+* Understood how `map()` transforms data and `filter()` selects specific elements.
+* Learned to search for elements using `find()`.
+* Understood how `reduce()` can combine multiple values into a single result.
+* Learned to iterate through arrays using `forEach()`.
+* Improved confidence in solving problems involving collections of data.
+
+---
+
+## Challenges & Solutions
+
+Initially found it challenging to understand the working of callback functions and the differences between advanced array methods such as `map()`, `filter()`, and `reduce()`. Through repeated practice and implementing small examples, the purpose and usage of each method became much clearer.
+
+---
+
+## Conclusion
+
+Today's session focused on arrays and their methods, which are essential for working with collections of data in JavaScript. Practicing both basic and advanced array methods strengthened my understanding of data manipulation and introduced me to functional programming concepts that are widely used in modern JavaScript development.
+
+
+
+
+  let sports=["cricket", "football", "tennis"];
+
+sports.push("volleyball");
+console.log(sports);
+
+sports.pop();
+console.log(sports);
+
+sports.shift();
+console.log(sports);
+
+sports.unshift("cricket");
+console.log(sports);
+
+sports.splice(1,0,"basketball");
+console.log(sports);
+
+let arr=[1, 2, 5, 9 ,4];
+arr.sort();
+console.log(arr);
+
+arr.reverse();
+console.log(arr);
+
+let arr1=[2, 3,[9,5], 7];
+let result = arr1.flat();
+console.log(result);
+
+arr.fill(6,2,4);
+console.log(arr);
+
+arr.copyWithin(0,1,3);
+console.log(arr);
+
+let numbers=[1,2,3,4,5,6];
+let names=["maya","rahul","cara"]
+
+//map()
+console.log(numbers.map(num=>num*2));
+console.log(names.map(name=>name.toUpperCase()));
+
+//filter
+console.log(numbers.filter(num=>num%2===0));
+console.log(numbers.filter(num=>num%2!==0));
+let nums=[50,100,30,70,20];
+console.log(nums.filter(num=>num>50));
+
+//find
+console.log(numbers.find(num=>num%2===0));
+let fruits=["Banana","cherry","Mango"];
+console.log(fruits.findIndex(fruit=>fruit=="Mango"));
+
+//reduce
+console.log(numbers.reduce((acc,curr)=>acc*curr,1));
+console.log(numbers.reduce((acc,curr)=>acc<curr ? curr : acc));
