@@ -1,0 +1,161 @@
+Day 12 Report - JavaScript DOM Basics
+##Topics Covered
+## What is DOM (Document Object Model)?
+DOM stands for Document Object Model.
+It is a programming interface that represents an HTML document as a tree of objects.
+JavaScript uses the DOM to access, modify, add, or remove HTML elements dynamically.
+Why DOM is Important?
+Change text dynamically.
+Change CSS styles.
+Add or remove HTML elements.
+Create interactive websites.
+  ##Types of Nodes
+Every object inside the DOM is called a Node.
+Types of Nodes
+##Element Node
+Represents HTML tags.
+Example:
+<h1>Hello</h1>
+<p>Welcome</p>
+<h1> and <p> are Element Nodes.
+## Text Node
+Represents the text inside an element.
+Example:
+<h1>Hello Akshita</h1>
+Here,
+Hello Akshita
+is a Text Node.
+##Attribute Node
+Represents attributes of an element.
+Example
+<img src="image.png" alt="Image">
+Here,
+src
+alt
+are Attribute Nodes.
+## Comment Node
+Represents comments.
+<!-- This is a comment -->
+DOM Tree
+Document
+│
+html
+│
+body
+├───────────────┐
+│               │
+h1              p
+│               │
+Hello         Welcome
+## innerHTML
+Definition
+innerHTML changes or reads the content inside an HTML element.
+HTML
+<h2 id="demo">Hello</h2>
+
+<button onclick="changeText()">Click</button>
+JavaScript
+function changeText(){
+
+document.getElementById("demo").innerHTML="Welcome to JavaScript";
+
+}
+Output
+Before
+Hello
+After
+Welcome to JavaScript
+4. outerHTML
+Definition
+outerHTML replaces the entire HTML element.
+HTML
+<h2 id="demo">Hello</h2>
+JavaScript
+document.getElementById("demo").outerHTML="<h1>Welcome</h1>";
+Output
+<h1>Welcome</h1>
+The <h2> element is completely replaced by <h1>.
+Difference
+innerHTML
+outerHTML
+Changes only the content inside an element
+Replaces the entire element
+Element remains the same
+Element itself changes
+##DOM + CSS
+JavaScript can also change CSS properties using the DOM.
+HTML
+<h1 id="heading">Hello Akshita</h1>
+
+<button onclick="changeColor()">Click</button>
+CSS
+#heading{
+color:blue;
+font-size:35px;
+}
+JavaScript
+function changeColor(){
+
+document.getElementById("heading").style.color="red";
+
+document.getElementById("heading").style.fontSize="50px";
+
+}
+##Complete Practical
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Practical</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+margin-top:100px;
+}
+
+button{
+padding:10px 20px;
+cursor:pointer;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1 id="heading">Hello Akshita</h1>
+
+<p id="para">Learning DOM</p>
+
+<button onclick="changeData()">Click Me</button>
+
+<script>
+
+function changeData(){
+
+document.getElementById("heading").innerHTML="Welcome";
+
+document.getElementById("heading").style.color="red";
+
+document.getElementById("para").innerHTML="DOM Successfully Updated";
+
+}
+
+</script>
+
+</body>
+</html>
+##Learning Outcome
+Today I learned:
+What is DOM.
+DOM Tree Structure.
+Different Types of Nodes.
+Difference between innerHTML and outerHTML.
+How JavaScript accesses HTML elements using the DOM.
+How CSS properties can be changed using JavaScript.
+How to build a simple interactive webpage using HTML, CSS, and JavaScript.
