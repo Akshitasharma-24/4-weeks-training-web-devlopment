@@ -1,0 +1,376 @@
+# 📅 Day 13 - JavaScript DOM Manipulation
+
+## 📌 Introduction
+
+Today, I learned about JavaScript DOM (Document Object Model) and how JavaScript interacts with HTML and CSS to make web pages dynamic and interactive. I also practiced creating elements dynamically, inserting elements at different positions, and building a simple Counter Application using DOM.
+
+---
+
+# 📖 What is DOM?
+
+DOM stands for **Document Object Model**.
+
+It is a programming interface that represents an HTML document as a tree structure. Every HTML element is treated as an object (node), allowing JavaScript to access, modify, create, or remove elements dynamically.
+
+### DOM Structure
+
+```
+Document
+   │
+ html
+   │
+ body
+ ├───────────────┐
+ │               │
+ h1              p
+ │               │
+Hello         Welcome
+```
+
+### Why DOM is Important?
+
+- Access HTML elements.
+- Change content dynamically.
+- Modify CSS properties.
+- Add or remove HTML elements.
+- Handle user events.
+- Build interactive web applications.
+
+---
+
+# 🌐 Browser Object
+
+The Browser Object represents the browser window. It provides information about the browser and allows JavaScript to interact with it.
+
+### Example
+
+```javascript
+console.log(window.innerWidth);
+
+console.log(window.location.href);
+
+console.log(document.title);
+```
+
+---
+
+# 🎯 DOM with CSS
+
+JavaScript can change CSS properties dynamically using the DOM.
+
+### HTML
+
+```html
+<h1 id="heading">Hello Akshita</h1>
+
+<button onclick="changeColor()">Change Color</button>
+```
+
+### JavaScript
+
+```javascript
+function changeColor(){
+
+document.getElementById("heading").style.color="red";
+
+document.getElementById("heading").style.fontSize="45px";
+
+document.getElementById("heading").style.backgroundColor="yellow";
+
+}
+```
+
+---
+
+# 🏗 Creating an Element using DOM
+
+The `createElement()` method is used to create a new HTML element dynamically.
+
+### JavaScript
+
+```javascript
+let heading=document.createElement("h2");
+
+heading.innerHTML="Welcome to JavaScript";
+
+document.body.appendChild(heading);
+```
+
+---
+
+# 📥 insertAdjacentHTML()
+
+The `insertAdjacentHTML()` method inserts HTML at four different positions relative to an existing element.
+
+### HTML
+
+```html
+<div id="box">
+
+<h2>JavaScript DOM</h2>
+
+</div>
+```
+
+---
+
+## 1. beforebegin
+
+```javascript
+let box=document.getElementById("box");
+
+box.insertAdjacentHTML("beforebegin","<p>Before Begin</p>");
+```
+
+---
+
+## 2. afterbegin
+
+```javascript
+box.insertAdjacentHTML("afterbegin","<p>After Begin</p>");
+```
+
+---
+
+## 3. beforeend
+
+```javascript
+box.insertAdjacentHTML("beforeend","<p>Before End</p>");
+```
+
+---
+
+## 4. afterend
+
+```javascript
+box.insertAdjacentHTML("afterend","<p>After End</p>");
+```
+
+---
+
+# 🔢 Counter Application
+
+A simple counter application increases or decreases the value using JavaScript and DOM.
+
+### HTML
+
+```html
+<h2 id="count">0</h2>
+
+<button onclick="increment()">Increment</button>
+
+<button onclick="decrement()">Decrement</button>
+```
+
+### JavaScript
+
+```javascript
+let count=0;
+
+function increment(){
+
+count++;
+
+document.getElementById("count").innerHTML=count;
+
+}
+
+function decrement(){
+
+count--;
+
+document.getElementById("count").innerHTML=count;
+
+}
+```
+
+---
+
+# 📚 Topics Covered
+
+- Document Object Model (DOM)
+- Browser Object
+- DOM Tree
+- DOM Manipulation
+- DOM with CSS
+- createElement()
+- appendChild()
+- insertAdjacentHTML()
+- beforebegin
+- afterbegin
+- beforeend
+- afterend
+- Counter Application
+- Increment & Decrement using JavaScript
+
+---
+
+# 🎯 Learning Outcome
+
+- Understood the concept of the Document Object Model.
+- Learned how JavaScript interacts with HTML.
+- Explored Browser Object properties.
+- Practiced modifying CSS dynamically using JavaScript.
+- Learned to create new HTML elements dynamically.
+- Explored insertAdjacentHTML() with all four insertion positions.
+- Built a simple Counter Application using DOM Manipulation.
+- Improved understanding of JavaScript event handling and dynamic webpage updates.
+
+---
+
+# 💻 GitHub Commit Message
+
+```
+Day 13: Learned JavaScript DOM Manipulation, Browser Object, DOM with CSS, createElement(), insertAdjacentHTML(), and developed a Counter Application using Increment and Decrement functionality.
+```
+
+##codes done
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM with CSS</title>
+</head>
+<body>
+
+<h2 id="heading">Hello Students</h2>
+
+<button onclick="changeStyle()">Click Me</button>
+
+<script>
+function changeStyle() {
+    let h = document.getElementById("heading");
+    h.style.color = "blue";
+    h.style.backgroundColor = "yellow";
+    h.style.fontSize = "30px";
+    h.style.textAlign = "center";
+}
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counter App</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+}
+
+.container{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    width:350px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+#count{
+    font-size:60px;
+    color:#2575fc;
+    margin:20px 0;
+}
+
+button{
+    padding:12px 20px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.increment{
+    background:green;
+    color:white;
+}
+
+.decrement{
+    background:red;
+    color:white;
+}
+
+.reset{
+    background:#444;
+    color:white;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Counter App</h1>
+
+<h2 id="count">0</h2>
+
+<button class="increment" onclick="increment()">+</button>
+
+<button class="decrement" onclick="decrement()">-</button>
+
+<button class="reset" onclick="resetCounter()">Reset</button>
+
+</div>
+
+<script>
+
+let count = 0;
+
+function increment(){
+
+    count++;
+
+    document.getElementById("count").innerHTML = count;
+
+}
+
+function decrement(){
+
+    count--;
+
+    document.getElementById("count").innerHTML = count;
+
+}
+
+function resetCounter(){
+
+    count = 0;
+
+    document.getElementById("count").innerHTML = count;
+
+}
+
+</script>
+
+</body>
+</html>
