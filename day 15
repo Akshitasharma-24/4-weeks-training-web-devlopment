@@ -1,0 +1,271 @@
+# Day 15 Report
+
+# Topic: Creating a Registration Form Using HTML, CSS & JavaScript with Local Storage
+
+## Task Assigned
+
+The task assigned for Day 15 was to create a **Registration Form** using HTML, CSS, and JavaScript.
+
+The objective of this task was to create a user registration form where users can enter their personal details and store the entered data using JavaScript.
+
+The registration form should perform the following operations:
+
+- Accept user details such as name, email, phone number, and password.
+- Validate the entered information.
+- Check whether the password and confirm password fields match.
+- Store the registered user's data.
+- Save multiple user records using Local Storage.
+- Display a successful registration message after submitting the form.
+
+---
+
+# Theory
+
+A registration form is used to collect user information and store it for further use. In this task, HTML is used to create the structure of the form, CSS is used for designing and styling, and JavaScript is used to handle user input, validation, and data storage.
+
+JavaScript is used to make the form interactive by accessing input values, validating the data, creating objects, and storing information in the browser using Local Storage.
+
+---
+
+# Concepts Used
+
+## 1. HTML Forms
+
+HTML forms are used to collect user input from visitors.
+
+Different input fields are created for:
+- Name
+- Email
+- Phone Number
+- Password
+- Confirm Password
+
+Example:
+
+```html
+<input 
+type="text"
+id="name"
+placeholder="Enter Name"
+required>
+
+
+
+
+code
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Registration Form</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+}
+
+
+.container{
+    width:400px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+
+input{
+
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+
+}
+
+
+button{
+
+    width:100%;
+    padding:12px;
+    background:#2575fc;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+
+}
+
+
+button:hover{
+
+    background:#1a5edb;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h2>Registration Form</h2>
+
+
+<form id="registerForm">
+
+
+<input 
+type="text"
+id="name"
+placeholder="Enter Name"
+required>
+
+
+<input
+type="email"
+id="email"
+placeholder="Enter Email"
+required>
+
+
+<input
+type="tel"
+id="phone"
+placeholder="Enter Phone Number"
+required>
+
+
+<input
+type="password"
+id="password"
+placeholder="Enter Password"
+required>
+
+
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm Password"
+required>
+
+
+<button type="submit">Register</button>
+
+
+</form>
+
+
+</div>
+
+
+
+<script>
+
+
+const form=document.getElementById("registerForm");
+
+
+form.addEventListener("submit",function(event){
+
+
+event.preventDefault();
+
+
+
+let name=document.getElementById("name").value;
+
+let email=document.getElementById("email").value;
+
+let phone=document.getElementById("phone").value;
+
+let password=document.getElementById("password").value;
+
+let confirmPassword=document.getElementById("confirmPassword").value;
+
+
+
+if(password!==confirmPassword){
+
+alert("Password does not match!");
+
+return;
+
+}
+
+
+
+let user={
+
+name:name,
+
+email:email,
+
+phone:phone,
+
+password:password
+
+};
+
+
+
+console.log(user);
+
+
+
+let users=JSON.parse(localStorage.getItem("users")) || [];
+
+
+users.push(user);
+
+
+localStorage.setItem("users",JSON.stringify(users));
+
+
+alert("Registration Successful!");
+
+
+form.reset();
+
+
+});
+
+
+</script>
+
+
+</body>
+
+</html>
