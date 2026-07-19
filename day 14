@@ -1,0 +1,193 @@
+# Day 14 Report
+
+# Topic: Creating a Counter System Using HTML, CSS & JavaScript
+
+## Task Assigned
+
+The task assigned for Day 14 was to create a **Counter System** using HTML, CSS, and JavaScript.
+
+The objective of this task was to build an interactive counter application where the user can increase, decrease, and reset the counter value using buttons.
+
+The counter system should perform the following operations:
+
+- When the **Increment (+)** button is clicked, the counter value should increase by 1.
+- When the **Decrement (-)** button is clicked, the counter value should decrease by 1.
+- When the **Reset** button is clicked, the counter value should return to 0.
+- The updated value should be displayed instantly on the webpage without refreshing.
+
+---
+
+# Theory
+
+A counter application is a basic JavaScript project used to understand how JavaScript interacts with HTML elements and creates dynamic web pages.
+
+In this task, JavaScript is used to control the counter value and update it according to user actions. The concept of **DOM (Document Object Model) Manipulation** is used to access and modify HTML content dynamically.
+
+The DOM allows JavaScript to select HTML elements and change their content, style, or behavior during runtime.
+
+### Concepts Used:
+
+## 1. Variables
+
+Variables are used to store data values that can be changed during program execution.
+
+In this application, a variable named `count` is created to store the current counter value.
+
+```javascript
+let count = 0;
+
+
+###code 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Counter App</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+}
+
+
+.container{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    width:350px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+
+h1{
+    margin-bottom:20px;
+}
+
+
+#count{
+    font-size:60px;
+    color:#2575fc;
+    margin:20px 0;
+}
+
+
+button{
+    padding:12px 20px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+}
+
+
+.increment{
+    background:green;
+    color:white;
+}
+
+
+.decrement{
+    background:red;
+    color:white;
+}
+
+
+.reset{
+    background:#444;
+    color:white;
+}
+
+
+button:hover{
+    transform:scale(1.05);
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+<h1>Counter App</h1>
+
+
+<h2 id="count">0</h2>
+
+
+<button class="increment" onclick="increment()">+</button>
+
+<button class="decrement" onclick="decrement()">-</button>
+
+<button class="reset" onclick="resetCounter()">Reset</button>
+
+
+</div>
+
+
+
+<script>
+
+
+let count = 0;
+
+
+
+function increment(){
+
+    count++;
+
+    document.getElementById("count").innerHTML = count;
+
+}
+
+
+
+function decrement(){
+
+    count--;
+
+    document.getElementById("count").innerHTML = count;
+
+}
+
+
+
+function resetCounter(){
+
+    count = 0;
+
+    document.getElementById("count").innerHTML = count;
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
