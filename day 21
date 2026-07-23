@@ -1,0 +1,44 @@
+# Day 21 Report
+
+# Topic: Routing in React
+
+## Task Assigned
+
+The task for Day 21 was to learn about **Routing in React**.
+
+Routing is used to navigate between different pages or views of a web application without completely reloading the webpage.
+
+During this session, we learned how to create different pages and navigate between them using React Router.
+
+The main concepts covered were:
+
+- What is Routing?
+- What is React Router?
+- Installing React Router
+- Creating different components as pages
+- Creating Routes
+- Using `BrowserRouter`
+- Using `Routes`
+- Using `Route`
+- Using `Link`
+- Navigating between pages
+- Creating a Navigation Bar
+
+---
+
+# What is Routing?
+
+Routing is the process of navigating from one page or view to another in a web application.
+
+In a traditional website, clicking a link may reload the entire webpage.
+
+In a React application, routing allows the application to display different components based on the URL without completely reloading the page.
+
+Example:
+
+```text
+/        → Home Page
+
+/about  → About Page
+
+/contact → Contact Page
