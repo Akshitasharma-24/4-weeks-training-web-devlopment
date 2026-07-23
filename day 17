@@ -1,0 +1,62 @@
+# Day 17 Report
+
+# Topic: Creating and Using Components in React
+
+## Task Assigned
+
+The task for Day 17 was to understand the concept of **components in React** and learn how to organize a React application by creating separate component files.
+
+During this session, we created different components such as:
+
+- `Home.jsx`
+- `About.jsx`
+- `Content.jsx`
+
+Each component was created in a separate file and then used inside the main React application.
+
+The objective of this task was to understand how a React application can be divided into multiple reusable components instead of writing all the code in a single file.
+
+---
+
+# Theory
+
+## What are Components in React?
+
+Components are the building blocks of a React application.
+
+A component is an independent and reusable part of the user interface. Each component can contain its own structure and content.
+
+For example, a website can be divided into different components:
+
+- Home Component
+- About Component
+- Content Component
+
+Each component can be created separately and combined to create a complete user interface.
+
+This approach makes the code:
+
+- Organized
+- Reusable
+- Easy to understand
+- Easy to maintain
+
+---
+
+# Component-Based Structure
+
+In React, a large application can be divided into multiple smaller components.
+
+For example:
+
+```text
+src/
+│
+├── components/
+│   │
+│   ├── Home.jsx
+│   ├── About.jsx
+│   └── Content.jsx
+│
+├── App.jsx
+└── main.jsx
