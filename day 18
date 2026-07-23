@@ -1,0 +1,33 @@
+# Day 18 Report
+
+# Topic: Understanding and Using Props in React
+
+## Task Assigned
+
+The task for Day 18 was to learn about **Props in React** and understand how data can be passed from one component to another.
+
+During this session, we learned:
+
+- What Props are in React.
+- Why Props are used.
+- How to pass data from a parent component to a child component.
+- How to receive and use Props inside a component.
+- How Props make React components reusable.
+- How to pass different types of data through Props.
+
+---
+
+# Theory
+
+## What are Props in React?
+
+Props is short for **Properties**.
+
+Props are used to pass data from one React component to another component.
+
+Props generally allow data to be passed from a **parent component** to a **child component**.
+
+For example, if a parent component wants to send a name to a child component, it can pass the name as a prop.
+
+```jsx
+<Greeting name="John" />
