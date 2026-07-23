@@ -1,0 +1,58 @@
+# Day 16 Report
+
+# Topic: Introduction to React and React Environment Setup
+
+## Task Assigned
+
+The task for Day 16 was to set up the basic development environment required for React and understand the fundamental concepts of React.
+
+During this session, the required tools and packages were installed on the laptop to create and run React applications. After completing the setup, we started learning the basic idea of React and created a basic React application.
+
+The main objectives of the session were:
+
+- Installing Node.js and npm.
+- Understanding the purpose of Node Package Manager.
+- Creating a basic React application.
+- Understanding the basic structure of a React application.
+- Learning about React components.
+- Understanding JSX.
+- Rendering content in a React application.
+- Running the React application in the browser.
+
+---
+
+# Theory
+
+## What is React?
+
+React is a JavaScript library used for building user interfaces, especially interactive and dynamic web applications.
+
+React allows developers to divide a webpage into smaller reusable components. Instead of creating an entire webpage as one large file, the interface can be divided into multiple components.
+
+For example, a webpage can contain:
+
+- Header Component
+- Navigation Component
+- Main Content Component
+- Footer Component
+
+Each component can be created and reused independently.
+
+React helps developers build user interfaces in a structured and efficient way.
+
+---
+
+# React Environment Setup
+
+Before creating a React application, some basic tools are required.
+
+## 1. Node.js
+
+Node.js provides the runtime environment required to execute JavaScript outside the browser.
+
+It is also required for running React development tools and managing project dependencies.
+
+To check the installed Node.js version, the following command can be used:
+
+```bash
+node -v
