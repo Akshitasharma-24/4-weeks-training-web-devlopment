@@ -1,0 +1,59 @@
+# Day 19 Report
+
+# Topic: Understanding State and Hooks in React
+
+## Task Assigned
+
+The task for Day 19 was to learn about **State in React** and understand how React manages changing data inside components.
+
+During this session, we learned how State is used to store and manage data that can change during the execution of a React application.
+
+We also learned about different types of State, Initial State, View State, and React Hooks, especially the `useState` Hook.
+
+The main objectives of the session were:
+
+- Understanding the concept of State in React.
+- Understanding Initial State.
+- Understanding View State.
+- Learning about different types of State.
+- Learning about React Hooks.
+- Understanding the `useState` Hook.
+- Learning how to update State.
+- Understanding how State changes update the user interface.
+- Creating interactive components using State.
+
+---
+
+# Theory
+
+## What is State in React?
+
+State is one of the most important concepts in React.
+
+State is used to store information or data that can change during the execution of an application.
+
+Examples of data that can be managed using State include:
+
+- Counter values
+- User input
+- Login status
+- Selected items
+- Form data
+- Loading status
+- Modal visibility
+- Theme settings
+
+When the State changes, React automatically re-renders the component and updates the user interface.
+
+For example:
+
+```text
+Initial State
+     ↓
+User Performs an Action
+     ↓
+State Changes
+     ↓
+React Re-renders the Component
+     ↓
+Updated UI is Displayed
