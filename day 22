@@ -1,0 +1,50 @@
+# Day 22 Report
+
+# Topic: Practice of Routing in React
+
+## Task Assigned
+
+Day 22 was the final day of my four-week Web Development training.
+
+During the training period, I learned various concepts related to HTML, CSS, JavaScript, and React.
+
+Since the training lasted for four weeks, Saturdays and Sundays were holidays. Therefore, Day 22 was the final training day.
+
+On this day, I practiced different questions and practical tasks based on **Routing in React**.
+
+The main purpose of the session was to revise and practically implement the routing concepts learned in the previous session.
+
+---
+
+# Topics Practiced
+
+The main concepts practiced on Day 22 were:
+
+- React Routing
+- `react-router-dom`
+- `BrowserRouter`
+- `Routes`
+- `Route`
+- `Link`
+- Navigation between pages
+- Creating multiple components
+- Connecting components with different URLs
+- Single Page Application Navigation
+- Practical routing questions
+
+---
+
+# What is Routing?
+
+Routing is the process of navigating between different pages or views of an application.
+
+In React, routing allows different components to be displayed based on the current URL.
+
+For example:
+
+```text
+/          → Home Page
+
+/about     → About Page
+
+/contact   → Contact Page
